@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "siteName": "Activités Nature",
+    "titleTemplate": "%s | Activités Nature — Rafting & Canyoning near Embrun",
+    "defaultDescription": "Xavier and Patrick, independent state-certified guides, take you rafting on the Durance river and canyoning near Embrun and Lake Serre-Ponçon, in the French Alps."
+  },
+  "nav": {
+    "home": "Home",
+    "rafting": "Rafting",
+    "canyoning": "Canyoning",
+    "about": "Our guides",
+    "pricing": "Pricing",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "bookNow": "Book now"
+  },
+  "switcher": {
+    "label": "Choose your adventure",
+    "rafting": "Rafting",
+    "canyoning": "Canyoning"
+  },
+  "hero": {
+    "rafting": {
+      "eyebrow": "Whitewater · Durance river",
+      "title": "Ride the Durance rapids",
+      "subtitle": "Join Xavier and Patrick for a run down the Durance river's rapids, between cliffs and forests in the French Alps. Real thrills, professional guiding.",
+      "cta": "Book a descent",
+      "cta2": "Discover rafting"
+    },
+    "canyoning": {
+      "eyebrow": "Whitewater · Écrins canyons",
+      "title": "Dive into the canyons",
+      "subtitle": "Jumps, natural slides, abseils and waterfall pools: our mountain guides take you through the finest canyons around Embrun, safely and at your pace.",
+      "cta": "Book a canyon trip",
+      "cta2": "Discover canyoning"
+    }
+  },
+  "trust": {
+    "guides": "State-certified guides",
+    "experience": "30 years of combined experience",
+    "season": "Open April 1 – October 2",
+    "location": "Based in Baratier, Lake Serre-Ponçon"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "Xavier & Patrick, passionate whitewater guides",
+    "body": "Activités Nature is run by two independent guides based in Baratier, on the shore of Lake Serre-Ponçon, right next to Embrun. Mountain guides and state-certified instructors, Xavier and Patrick share over 30 years of combined experience in rafting and canyoning across the Hautes-Alpes. Their goal: share their playground with groups, families and beginners, in a friendly and safe atmosphere.",
+    "guide1Name": "Patrick",
+    "guide1Role": "Mountain guide, whitewater instructor",
+    "guide2Name": "Xavier",
+    "guide2Role": "State-certified whitewater instructor",
+    "certifications": "State diplomas, professional J.S. certifications",
+    "cta": "Meet the guides"
+  },
+  "activities": {
+    "eyebrow": "Our activities",
+    "title": "An adventure for every mood",
+    "subtitle": "From family-friendly rafting on the Durance to sportier canyons in the Écrins: our guides tailor every trip to your level.",
+    "rafting": {
+      "title": "Rafting on the Durance",
+      "description": "Aboard a raft led by a state-certified guide, ride the Durance river's rapids through a spectacular setting of limestone cliffs and forests in the Hautes-Alpes. The descent adapts to the group's level and mood, from playful stretches to livelier rapids, with no prior experience required. A friendly, refreshing activity — perfect with friends, family, or for a stag or hen party.",
+      "highlights": [
+        "Durance river, right by Embrun",
+        "Led by a certified instructor",
+        "Full gear provided",
+        "Great for groups, families, stag/hen parties",
+        "No experience needed",
+        "A lively ride, real thrills guaranteed"
+      ]
+    },
+    "canyoning": {
+      "title": "Canyoning in the Écrins",
+      "description": "Wading through the torrent, jumps, natural slides and short abseils: our guides pick the canyon that matches your level.",
+      "highlights": [
+        "Two routes depending on level",
+        "Full neoprene gear provided",
+        "Small groups, close guiding",
+        "Practice area before the jumps"
+      ],
+      "itineraries": [
+        {
+          "name": "Le Couleau",
+          "tag": "Family",
+          "minAge": "Ages 7+",
+          "description": "A gentle aquatic hike: wading, small jumps, slides and caves. Perfect as a family."
+        },
+        {
+          "name": "Canyon du Fournel",
+          "tag": "Sporty",
+          "minAge": "Ages 12+",
+          "description": "In Argentière-la-Bessée, 40 minutes from Embrun: 2–7 metre jumps, a natural slide and a via ferrata section."
+        }
+      ]
+    }
+  },
+  "practical": {
+    "eyebrow": "Good to know",
+    "title": "What to know before you come",
+    "season": {
+      "label": "Season",
+      "value": "April 1 to October 2, every day"
+    },
+    "duration": {
+      "label": "Duration",
+      "value": "Half-day, about 2h30 including 1h30 of active time"
+    },
+    "group": {
+      "label": "Groups",
+      "value": "Discounted rate from 3 participants"
+    },
+    "equipment": {
+      "label": "Gear provided",
+      "value": "Neoprene wetsuit, vest, water shoes, helmet, harness"
+    },
+    "bring": {
+      "label": "What to bring",
+      "value": "Swimsuit, closed-toe shoes, towel and a change of clothes"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Options for every group",
+    "subtitle": "Indicative season pricing — get in touch for an exact quote for your group and dates.",
+    "placeholderNotice": "Prices to be confirmed with Xavier and Patrick before booking.",
+    "perPerson": "/ person",
+    "from": "from",
+    "cta": "Request a quote"
+  },
+  "testimonials": {
+    "eyebrow": "Reviews",
+    "title": "What our adventurers say",
+    "empty": "Customer reviews are coming soon to this page.",
+    "cta": "See our reviews on Facebook"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "The adventure in pictures",
+    "subtitle": "Rafting on the Durance, canyoning in the Écrins: a look at our trips. More photos on our Facebook page."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Ready for the adventure?",
+    "subtitle": "A trip idea, a question, a group booking? Get in touch with Xavier and Patrick directly.",
+    "addressLabel": "Address",
+    "address": "Z.A. Les Portes du Lac, 05200 Baratier, France",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "facebookLabel": "Facebook",
+    "mapCta": "Get directions",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "activity": "Activity",
+      "message": "Your message",
+      "submit": "Send request",
+      "success": "Thank you! Your message has been sent, we'll get back to you shortly."
+    }
+  },
+  "footer": {
+    "tagline": "Rafting & canyoning between Embrun and Lake Serre-Ponçon.",
+    "rights": "All rights reserved.",
+    "madeWith": "Site designed for Activités Nature."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page doesn't exist.",
+    "cta": "Back to home"
+  }
+}

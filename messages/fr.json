@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "siteName": "Activités Nature",
+    "titleTemplate": "%s | Activités Nature — Rafting & Canyoning à Embrun",
+    "defaultDescription": "Xavier et Patrick, moniteurs indépendants diplômés d'État, vous emmènent en rafting sur la Durance et en canyoning près d'Embrun et du lac de Serre-Ponçon, dans les Hautes-Alpes."
+  },
+  "nav": {
+    "home": "Accueil",
+    "rafting": "Rafting",
+    "canyoning": "Canyoning",
+    "about": "Les guides",
+    "pricing": "Tarifs",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  },
+  "switcher": {
+    "label": "Choisissez votre aventure",
+    "rafting": "Rafting",
+    "canyoning": "Canyoning"
+  },
+  "hero": {
+    "rafting": {
+      "eyebrow": "Eau vive · Rivière Durance",
+      "title": "Dévalez la Durance en rafting",
+      "subtitle": "Embarquez avec Xavier et Patrick pour une descente rythmée par les rapides de la Durance, entre falaises et forêts des Hautes-Alpes. Sensations garanties, encadrement pro.",
+      "cta": "Réserver une descente",
+      "cta2": "Voir le rafting"
+    },
+    "canyoning": {
+      "eyebrow": "Eau vive · Canyons des Écrins",
+      "title": "Plongez au cœur des canyons",
+      "subtitle": "Sauts, toboggans naturels, rappels et bains de cascade : nos guides de moyenne montagne vous font découvrir les plus beaux canyons autour d'Embrun, en toute sécurité.",
+      "cta": "Réserver un canyon",
+      "cta2": "Voir le canyoning"
+    }
+  },
+  "trust": {
+    "guides": "Guides diplômés d'État",
+    "experience": "30 ans d'expérience cumulée",
+    "season": "Ouvert du 1er avril au 2 octobre",
+    "location": "Basés à Baratier, lac de Serre-Ponçon"
+  },
+  "about": {
+    "eyebrow": "Qui sommes-nous",
+    "title": "Xavier & Patrick, moniteurs passionnés d'eau vive",
+    "body": "Activités Nature, c'est avant tout deux moniteurs indépendants installés à Baratier, au bord du lac de Serre-Ponçon, à deux pas d'Embrun. Guides de moyenne montagne et titulaires de brevets d'État, Xavier et Patrick cumulent plus de 30 ans d'expérience en rafting et canyoning dans les Hautes-Alpes. Leur objectif : partager leur terrain de jeu avec des groupes, des familles et des débutants, dans une ambiance conviviale et sécurisée.",
+    "guide1Name": "Patrick",
+    "guide1Role": "Guide de moyenne montagne, encadrant eau vive",
+    "guide2Name": "Xavier",
+    "guide2Role": "Moniteur diplômé d'État, encadrant eau vive",
+    "certifications": "Diplômes d'État, brevets professionnels J.S.",
+    "cta": "Faire connaissance"
+  },
+  "activities": {
+    "eyebrow": "Nos activités",
+    "title": "Une aventure pour chaque envie",
+    "subtitle": "Du rafting familial sur la Durance aux canyons sportifs des Écrins : nos guides adaptent chaque sortie à votre niveau.",
+    "rafting": {
+      "title": "Rafting sur la Durance",
+      "description": "À bord d'un raft mené par un moniteur diplômé d'État, dévalez les rapides de la Durance dans un cadre grandiose, entre falaises calcaires et forêts des Hautes-Alpes. La descente s'adapte au niveau et aux envies du groupe, des passages ludiques aux rapides plus toniques, sans expérience préalable requise. Une activité conviviale et rafraîchissante, parfaite entre amis, en famille ou pour un enterrement de vie de garçon ou de jeune fille.",
+      "highlights": [
+        "Rivière Durance, au pied d'Embrun",
+        "Encadrement par moniteur diplômé",
+        "Matériel complet fourni",
+        "Idéal groupes, familles, EVG/EVJF",
+        "Aucune expérience requise",
+        "Descente rythmée, sensations garanties"
+      ]
+    },
+    "canyoning": {
+      "title": "Canyoning dans les Écrins",
+      "description": "Marche dans le torrent, sauts, toboggans naturels et petits rappels : nos guides choisissent le canyon selon votre niveau.",
+      "highlights": [
+        "Deux parcours selon le niveau",
+        "Matériel néoprène complet fourni",
+        "Groupes réduits, encadrement rapproché",
+        "Zone d'entraînement avant les sauts"
+      ],
+      "itineraries": [
+        {
+          "name": "Le Couleau",
+          "tag": "Familial",
+          "minAge": "Dès 7 ans",
+          "description": "Randonnée aquatique en douceur : marche, petits sauts, toboggans et grottes. Idéal en famille."
+        },
+        {
+          "name": "Canyon du Fournel",
+          "tag": "Sportif",
+          "minAge": "Dès 12 ans",
+          "description": "À Argentière-la-Bessée, 40 min d'Embrun : sauts de 2 à 7 mètres, toboggan naturel et passage en via ferrata."
+        }
+      ]
+    }
+  },
+  "practical": {
+    "eyebrow": "Infos pratiques",
+    "title": "Ce qu'il faut savoir avant de venir",
+    "season": {
+      "label": "Saison",
+      "value": "Du 1er avril au 2 octobre, tous les jours"
+    },
+    "duration": {
+      "label": "Durée",
+      "value": "Demi-journée, environ 2h30 dont 1h30 de pratique"
+    },
+    "group": {
+      "label": "Groupes",
+      "value": "Tarif réduit à partir de 3 participants"
+    },
+    "equipment": {
+      "label": "Matériel fourni",
+      "value": "Combinaison néoprène, gilet, chaussons, casque, baudrier"
+    },
+    "bring": {
+      "label": "À prévoir",
+      "value": "Maillot de bain, chaussures fermées, serviette et vêtements de rechange"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Des formules pour tous les groupes",
+    "subtitle": "Tarifs indicatifs pour la saison — contactez-nous pour un devis précis selon votre groupe et vos dates.",
+    "placeholderNotice": "Tarifs à confirmer avec Xavier et Patrick avant réservation.",
+    "perPerson": "/ pers.",
+    "from": "à partir de",
+    "cta": "Demander un devis"
+  },
+  "testimonials": {
+    "eyebrow": "Avis",
+    "title": "Ce que nos aventuriers en disent",
+    "empty": "Les avis clients arrivent bientôt sur cette page.",
+    "cta": "Voir nos avis sur Facebook"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "L'aventure en images",
+    "subtitle": "Rafting sur la Durance, canyoning dans les Écrins : un aperçu de nos sorties. Plus de photos sur notre page Facebook."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Prêts pour l'aventure ?",
+    "subtitle": "Un projet de sortie, une question, une réservation de groupe ? Contactez Xavier et Patrick directement.",
+    "addressLabel": "Adresse",
+    "address": "Z.A. Les Portes du Lac, 05200 Baratier",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "facebookLabel": "Facebook",
+    "mapCta": "Itinéraire",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "activity": "Activité souhaitée",
+      "message": "Votre message",
+      "submit": "Envoyer la demande",
+      "success": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement."
+    }
+  },
+  "footer": {
+    "tagline": "Rafting & canyoning entre Embrun et le lac de Serre-Ponçon.",
+    "rights": "Tous droits réservés.",
+    "madeWith": "Site conçu pour Activités Nature."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "Cette page n'existe pas ou plus.",
+    "cta": "Retour à l'accueil"
+  }
+}
