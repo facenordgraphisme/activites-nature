@@ -54,7 +54,7 @@ function SwitchOption({
       {active && (
         <motion.span
           layoutId="activity-switch-pill"
-          className="absolute inset-0 -z-10 rounded-full bg-white"
+          className="absolute inset-0 -z-10 rounded-full bg-[color:var(--brand)]"
           transition={{ type: "spring", duration: 0.5, bounce: 0.15 }}
         />
       )}

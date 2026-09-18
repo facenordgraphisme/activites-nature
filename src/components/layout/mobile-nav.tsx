@@ -116,7 +116,7 @@ export function MobileNav({
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2.5 font-display text-4xl font-semibold tracking-tight text-white/90 transition-colors duration-200 ease-out hover:text-white"
+                  className="block py-2.5 font-display text-4xl font-semibold tracking-tight text-white transition-colors duration-200 ease-out hover:text-[color:var(--brand)]"
                 >
                   {link.label}
                 </Link>
@@ -128,7 +128,7 @@ export function MobileNav({
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-center text-sm font-semibold text-ink"
+              className="flex items-center justify-center rounded-full bg-[color:var(--brand)] px-6 py-3.5 text-center text-sm font-semibold text-ink"
             >
               {bookLabel}
             </Link>
@@ -139,14 +139,14 @@ export function MobileNav({
   );
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         ref={toggleRef}
         type="button"
         onClick={handleOpen}
         aria-label="Ouvrir le menu"
         aria-expanded={open}
-        className="flex h-11 w-11 items-center justify-center"
+        className="flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 ease-out hover:bg-surface-muted"
       >
         <HamburgerIcon open={false} />
       </button>

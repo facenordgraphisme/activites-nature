@@ -2,19 +2,30 @@
 
 :root {
   /* Neutral page chrome — stays stable across activity switches so content stays readable. */
-  --paper: #faf8f4;
-  --ink: #0e1414;
-  --ink-soft: #4a5555;
+  --paper: #f5f2ea;
+  --ink: #0b0f0f;
+  --ink-soft: #56605d;
   --surface: #ffffff;
-  --surface-muted: #f1efe9;
-  --border: #e4e0d6;
+  --surface-muted: #ece7d9;
+  --border: #ddd6c4;
 
-  /* Activity palette — animated at runtime by ActivityThemeLayer. Defaults to rafting. */
-  --activity-from: #06263f;
-  --activity-via: #0b5b78;
-  --activity-to: #12a3ab;
-  --activity-accent: #4fe6d1;
-  --activity-accent-soft: #bff2ea;
+  /* Unified brand signal — one accent across the whole site, chip/button/link color. */
+  --brand: #cdff5c;
+  --brand-strong: #a6e620;
+  --brand-soft: #e8ffb8;
+
+  /* Ink-dark surface, used for high-contrast cards/footer floating on the paper page. */
+  --surface-dark: #10160f;
+  --surface-dark-soft: #1a2118;
+  --border-dark: rgba(255, 255, 255, 0.1);
+
+  /* Activity photo-wash — animated at runtime by ActivityThemeLayer. Defaults to rafting.
+     Only the wash + hero foreground differ per activity; chrome (buttons, badges) stays on --brand. */
+  --activity-from: #052033;
+  --activity-via: #0a4f68;
+  --activity-to: #0f8f97;
+  --activity-accent: var(--brand);
+  --activity-accent-soft: var(--brand-soft);
   --activity-fg: #eefdfb;
 
   /* Motion tokens, per the animate skill's curve tables. */
@@ -27,11 +38,11 @@
    the dramatic gradient bloom lives in the hero, this just keeps the rest of the
    page feeling re-tinted without a jarring hard cut. */
 [data-activity="canyoning"] {
-  --activity-from: #2e150f;
-  --activity-via: #7a3418;
-  --activity-to: #c8631f;
-  --activity-accent: #f7a94a;
-  --activity-accent-soft: #fbdcb0;
+  --activity-from: #261209;
+  --activity-via: #6e2f13;
+  --activity-to: #c85a1a;
+  --activity-accent: var(--brand);
+  --activity-accent-soft: var(--brand-soft);
   --activity-fg: #fff6ec;
 }
 
@@ -48,6 +59,13 @@
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
+
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-soft: var(--surface-dark-soft);
+  --color-border-dark: var(--border-dark);
 
   --color-activity-from: var(--activity-from);
   --color-activity-via: var(--activity-via);
@@ -68,6 +86,8 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -75,4 +95,20 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
+}
+
+/* Fine halftone grain overlay for dark cards/hero surfaces — cheap, no image asset. */
+.bg-grain {
+  position: relative;
+}
+.bg-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 22px 22px;
+  border-radius: inherit;
 }

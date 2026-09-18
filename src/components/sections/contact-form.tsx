@@ -5,10 +5,13 @@ import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 import { business } from "@/lib/business-data";
 
-export function ContactForm() {
+export function ContactForm({ activityOptions }: { activityOptions?: string[] }) {
   const t = useTranslations("contact.form");
   const tActivities = useTranslations("activities");
   const [sent, setSent] = useState(false);
+  const options = activityOptions?.length
+    ? activityOptions
+    : [tActivities("rafting.title"), tActivities("canyoning.title")];
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -36,11 +39,6 @@ export function ContactForm() {
     setSent(true);
   }
 
-  const activityOptions = [
-    tActivities("rafting.title"),
-    tActivities("canyoning.title"),
-  ];
-
   return (
     <form onSubmit={handleSubmit} className="grid gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
@@ -55,9 +53,9 @@ export function ContactForm() {
           </label>
           <select
             name="activity"
-            className="w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-ink"
+            className="w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-[color:var(--brand-strong)]"
           >
-            {activityOptions.map((option) => (
+            {options.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
@@ -72,13 +70,13 @@ export function ContactForm() {
         <textarea
           name="message"
           rows={5}
-          className="w-full resize-none rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-ink"
+          className="w-full resize-none rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-[color:var(--brand-strong)]"
         />
       </div>
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.97]"
+        className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-[color:var(--brand)] px-6 py-3 text-sm font-semibold text-ink transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.97]"
       >
         <Send size={16} />
         {t("submit")}
@@ -111,7 +109,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-ink"
+        className="w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-ink outline-none transition-colors duration-200 ease-out focus:border-[color:var(--brand-strong)]"
       />
     </div>
   );

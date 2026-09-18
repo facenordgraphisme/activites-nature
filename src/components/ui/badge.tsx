@@ -11,7 +11,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "activity-transition inline-flex items-center rounded-full bg-[color:var(--activity-accent-soft)] px-3 py-1 text-xs font-semibold text-ink",
+        "activity-transition inline-flex items-center rounded-full bg-[color:var(--activity-accent-soft)] px-3 py-1 text-xs font-semibold tracking-wide text-ink",
         className,
       )}
     >

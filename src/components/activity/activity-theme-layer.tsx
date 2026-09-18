@@ -14,16 +14,27 @@ import type { Activity } from "@/lib/activity";
  * is built around. Uses `backgroundImage` (not the `background` shorthand) so
  * the `bg-cover bg-center` classes on each layer aren't reset by inline styles.
  */
-export function ActivityThemeLayer({ initialActivity }: { initialActivity: Activity }) {
+export function ActivityThemeLayer({
+  initialActivity,
+  images,
+}: {
+  initialActivity: Activity;
+  /** CMS-resolved hero photo per activity — falls back to the palette's default asset. */
+  images?: Partial<Record<Activity, string>>;
+}) {
   const { registerLayer } = useActivity();
   const containerRef = useRef<HTMLDivElement>(null);
   const baseRef = useRef<HTMLDivElement>(null);
   const revealRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
+  const imageFor = (activity: Activity) => images?.[activity] ?? PALETTES[activity].heroImage;
 
   useEffect(() => {
     if (baseRef.current) {
-      baseRef.current.style.backgroundImage = photoBackgroundFor(PALETTES[initialActivity]);
+      baseRef.current.style.backgroundImage = photoBackgroundFor(
+        PALETTES[initialActivity],
+        imageFor(initialActivity),
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -43,11 +54,11 @@ export function ActivityThemeLayer({ initialActivity }: { initialActivity: Activ
         Math.max(y, rect.height - y),
       );
 
-      reveal.style.backgroundImage = photoBackgroundFor(PALETTES[next]);
+      reveal.style.backgroundImage = photoBackgroundFor(PALETTES[next], imageFor(next));
 
       if (prefersReducedMotion) {
         reveal.style.clipPath = `circle(${maxRadius}px at ${x}px ${y}px)`;
-        base.style.backgroundImage = photoBackgroundFor(PALETTES[next]);
+        base.style.backgroundImage = photoBackgroundFor(PALETTES[next], imageFor(next));
         reveal.style.transition = "opacity 200ms var(--ease-out)";
         reveal.style.opacity = "1";
         window.setTimeout(() => {
@@ -67,7 +78,7 @@ export function ActivityThemeLayer({ initialActivity }: { initialActivity: Activ
           reveal.style.clipPath = `circle(${value}px at ${x}px ${y}px)`;
         },
         onComplete: () => {
-          base.style.backgroundImage = photoBackgroundFor(PALETTES[next]);
+          base.style.backgroundImage = photoBackgroundFor(PALETTES[next], imageFor(next));
           reveal.style.clipPath = `circle(0px at ${x}px ${y}px)`;
         },
       });
@@ -75,7 +86,7 @@ export function ActivityThemeLayer({ initialActivity }: { initialActivity: Activ
 
     registerLayer(playWipe);
     return () => registerLayer(null);
-  }, [registerLayer, prefersReducedMotion]);
+  }, [registerLayer, prefersReducedMotion, images]);
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden">

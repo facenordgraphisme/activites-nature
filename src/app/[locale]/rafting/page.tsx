@@ -1,18 +1,31 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ActivityPageHero, ActivityAccentScope } from "@/components/sections/activity-page-hero";
 import { PracticalInfo } from "@/components/sections/practical-info";
 import { Cta } from "@/components/sections/cta";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
+import { getActivity, pick, type Locale } from "@/sanity/lib/content";
 
 export async function generateMetadata() {
+  const locale = (await getLocale()) as Locale;
   const t = await getTranslations("activities.rafting");
-  return { title: t("title"), description: t("description") };
+  const activity = await getActivity("rafting");
+  return {
+    title: pick(activity?.title, locale) ?? t("title"),
+    description: pick(activity?.description, locale) ?? t("description"),
+  };
 }
 
 export default async function RaftingPage() {
+  const locale = (await getLocale()) as Locale;
   const t = await getTranslations("activities");
-  const highlights = t.raw("rafting.highlights") as string[];
+  const activity = await getActivity("rafting");
+
+  const title = pick(activity?.title, locale) ?? t("rafting.title");
+  const description = pick(activity?.description, locale) ?? t("rafting.description");
+  const highlights =
+    activity?.highlights?.map((h) => pick(h, locale)).filter((v): v is string => Boolean(v)) ??
+    (t.raw("rafting.highlights") as string[]);
 
   return (
     <ActivityAccentScope activity="rafting">
@@ -22,10 +35,10 @@ export default async function RaftingPage() {
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
             <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-              {t("rafting.title")}
+              {title}
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
-              {t("rafting.description")}
+              {description}
             </p>
           </Reveal>
 
@@ -34,7 +47,7 @@ export default async function RaftingPage() {
               {highlights.map((item) => (
                 <li
                   key={item}
-                  className="rounded-xl border border-border bg-surface p-4 text-sm text-ink-soft"
+                  className="bg-grain rounded-xl bg-surface-dark p-4 text-sm text-white/80"
                 >
                   {item}
                 </li>

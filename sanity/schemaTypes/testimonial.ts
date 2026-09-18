@@ -21,4 +21,7 @@ export const testimonial = defineType({
     }),
     defineField({ name: "date", title: "Date", type: "date" }),
   ],
+  preview: {
+    select: { title: "author", subtitle: "quote.fr" },
+  },
 });

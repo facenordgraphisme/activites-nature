@@ -22,11 +22,17 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="activity-transition text-sm font-semibold uppercase tracking-wider text-[color:var(--activity-accent)]">
+        <p
+          className={cn(
+            "activity-transition inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft",
+            align === "center" && "justify-center",
+          )}
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--activity-accent)]" />
           {eyebrow}
         </p>
       )}
-      <h2 className="mt-2 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {subtitle && (

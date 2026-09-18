@@ -10,22 +10,27 @@ export type Palette = {
   heroImage: string;
 };
 
+// Chrome (buttons, badges, bullets) shares one brand accent everywhere — only the
+// photo wash + hero foreground swap per activity, so the site reads as one brand.
+const BRAND_ACCENT = "#cdff5c";
+const BRAND_ACCENT_SOFT = "#e8ffb8";
+
 export const PALETTES: Record<Activity, Palette> = {
   rafting: {
-    from: "#06263f",
-    via: "#0b5b78",
-    to: "#12a3ab",
-    accent: "#4fe6d1",
-    accentSoft: "#bff2ea",
+    from: "#052033",
+    via: "#0a4f68",
+    to: "#0f8f97",
+    accent: BRAND_ACCENT,
+    accentSoft: BRAND_ACCENT_SOFT,
     fg: "#eefdfb",
     heroImage: "/images/rafting/rafting-05.jpg",
   },
   canyoning: {
-    from: "#2e150f",
-    via: "#7a3418",
-    to: "#c8631f",
-    accent: "#f7a94a",
-    accentSoft: "#fbdcb0",
+    from: "#261209",
+    via: "#6e2f13",
+    to: "#c85a1a",
+    accent: BRAND_ACCENT,
+    accentSoft: BRAND_ACCENT_SOFT,
     fg: "#fff6ec",
     heroImage: "/images/canyoning/canyoning-06.jpg",
   },

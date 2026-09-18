@@ -13,41 +13,45 @@ export async function Header() {
     { href: "/canyoning", label: t("canyoning") },
     { href: "/a-propos", label: t("about") },
     { href: "/tarifs", label: t("pricing") },
+    { href: "/prochains-departs", label: t("departures") },
     { href: "/galerie", label: t("gallery") },
     { href: "/contact", label: t("contact") },
   ];
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/70 bg-paper/85 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-2 sm:px-8">
-        <Link href="/" className="flex items-center">
+    <header className="sticky top-3 z-30 px-3 sm:top-4 sm:px-4">
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-3 rounded-2xl border border-border/70 bg-paper/90 py-2 pl-3 pr-2 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)] backdrop-blur-xl sm:pl-4 sm:pr-3">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src="/logo.png"
             alt="Activités Nature"
-            width={80}
-            height={80}
-            className="h-20 w-20"
+            width={40}
+            height={40}
+            className="h-9 w-9 sm:h-10 sm:w-10"
             priority
           />
+          <span className="hidden font-display text-sm font-semibold tracking-tight text-ink sm:inline">
+            Activités Nature
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {links.slice(1).map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-soft transition-colors duration-200 ease-out hover:text-ink"
+              className="rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors duration-200 ease-out hover:bg-surface-muted hover:text-ink"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <LocaleSwitcher />
           <Link
             href="/contact"
-            className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.97]"
+            className="rounded-full bg-[color:var(--brand)] px-5 py-2.5 text-sm font-semibold text-ink transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.97]"
           >
             {t("bookNow")}
           </Link>

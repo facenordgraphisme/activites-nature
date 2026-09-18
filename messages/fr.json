@@ -10,6 +10,7 @@
     "canyoning": "Canyoning",
     "about": "Les guides",
     "pricing": "Tarifs",
+    "departures": "Départs",
     "gallery": "Galerie",
     "contact": "Contact",
     "bookNow": "Réserver"
@@ -156,6 +157,22 @@
       "submit": "Envoyer la demande",
       "success": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement."
     }
+  },
+  "departures": {
+    "eyebrow": "Prochains départs",
+    "title": "Réservez votre prochaine sortie",
+    "subtitle": "Choisissez un jour dans le calendrier pour voir les départs programmés et réserver directement en ligne.",
+    "emptyMessage": "Aucun départ programmé pour le moment — contactez-nous pour organiser une sortie sur mesure.",
+    "noBookingLink": "Bientôt en ligne",
+    "selectDayHint": "Sélectionnez un jour marqué pour voir les départs.",
+    "noDepartureThisDay": "Aucun départ ce jour-là.",
+    "departuresFor": "Départs du",
+    "prevMonth": "Mois précédent",
+    "nextMonth": "Mois suivant",
+    "full": "Complet",
+    "cancelled": "Annulé",
+    "spots": "{count, plural, one {# place} other {# places}}",
+    "priceSuffix": "/ pers."
   },
   "footer": {
     "tagline": "Rafting & canyoning entre Embrun et le lac de Serre-Ponçon.",

@@ -10,6 +10,7 @@
     "canyoning": "Canyoning",
     "about": "Our guides",
     "pricing": "Pricing",
+    "departures": "Departures",
     "gallery": "Gallery",
     "contact": "Contact",
     "bookNow": "Book now"
@@ -156,6 +157,22 @@
       "submit": "Send request",
       "success": "Thank you! Your message has been sent, we'll get back to you shortly."
     }
+  },
+  "departures": {
+    "eyebrow": "Upcoming departures",
+    "title": "Book your next trip",
+    "subtitle": "Pick a day on the calendar to see scheduled departures and book directly online.",
+    "emptyMessage": "No departures scheduled right now — get in touch to arrange a custom trip.",
+    "noBookingLink": "Coming soon",
+    "selectDayHint": "Select a highlighted day to see departures.",
+    "noDepartureThisDay": "No departures that day.",
+    "departuresFor": "Departures on",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month",
+    "full": "Full",
+    "cancelled": "Cancelled",
+    "spots": "{count, plural, one {# spot} other {# spots}}",
+    "priceSuffix": "/ person"
   },
   "footer": {
     "tagline": "Rafting & canyoning between Embrun and Lake Serre-Ponçon.",

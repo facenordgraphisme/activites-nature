@@ -16,5 +16,12 @@ export const teamMember = defineType({
       type: "array",
       of: [{ type: "string" }],
     }),
+    defineField({ name: "order", title: "Ordre d'affichage", type: "number" }),
   ],
+  orderings: [
+    { title: "Ordre d'affichage", name: "orderAsc", by: [{ field: "order", direction: "asc" }] },
+  ],
+  preview: {
+    select: { title: "name", subtitle: "role.fr", media: "photo" },
+  },
 });

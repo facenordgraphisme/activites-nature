@@ -1,45 +1,53 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Phone, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { business } from "@/lib/business-data";
+import { getContactPage, getSiteSettings, pick, type Locale } from "@/sanity/lib/content";
 
 export async function Cta() {
+  const locale = (await getLocale()) as Locale;
   const t = await getTranslations("contact");
+  const [contactPage, siteSettings] = await Promise.all([getContactPage(), getSiteSettings()]);
+
+  const title = pick(contactPage?.title, locale) ?? t("title");
+  const subtitle = pick(contactPage?.subtitle, locale) ?? t("subtitle");
+  const phone = siteSettings?.phones?.[0]?.number ?? business.phones[0].number;
+  const email = siteSettings?.email ?? business.email;
 
   return (
     <section className="py-24">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-ink px-8 py-16 text-center sm:px-16">
+          <div className="bg-grain relative overflow-hidden rounded-[2.5rem] bg-surface-dark px-8 py-16 text-center sm:px-16 sm:py-20">
             <div
-              className="pointer-events-none absolute inset-0 opacity-40"
+              className="pointer-events-none absolute inset-0 opacity-70"
               style={{
                 background:
-                  "linear-gradient(120deg, #06263f 0%, #12a3ab 45%, #c8631f 100%)",
+                  "radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--brand) 22%, transparent) 0%, transparent 55%), radial-gradient(circle at 85% 80%, color-mix(in oklab, var(--brand) 16%, transparent) 0%, transparent 50%)",
               }}
             />
             <div className="relative flex flex-col items-center gap-6">
-              <h2 className="max-w-xl font-display text-3xl font-semibold text-white sm:text-4xl">
-                {t("title")}
+              <h2 className="max-w-xl font-display text-3xl font-semibold text-white sm:text-5xl">
+                {title}
               </h2>
-              <p className="max-w-md text-sm leading-relaxed text-white/80 sm:text-base">
-                {t("subtitle")}
+              <p className="max-w-md text-sm leading-relaxed text-white/70 sm:text-base">
+                {subtitle}
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={`tel:${business.phones[0].number.replace(/\s/g, "")}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.97]"
+                  href={`tel:${phone.replace(/\s/g, "")}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--brand)] px-6 py-3 text-sm font-semibold text-ink transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.97]"
                 >
                   <Phone size={16} />
-                  {business.phones[0].number}
+                  {phone}
                 </a>
                 <a
-                  href={`mailto:${business.email}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 ease-out hover:bg-white/10"
+                  href={`mailto:${email}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 ease-out hover:bg-white/10"
                 >
                   <Mail size={16} />
-                  {business.email}
+                  {email}
                 </a>
               </div>
             </div>

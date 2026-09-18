@@ -19,5 +19,12 @@ export const galleryImage = defineType({
         ],
       },
     }),
+    defineField({ name: "order", title: "Ordre d'affichage", type: "number" }),
   ],
+  orderings: [
+    { title: "Ordre d'affichage", name: "orderAsc", by: [{ field: "order", direction: "asc" }] },
+  ],
+  preview: {
+    select: { title: "alt.fr", subtitle: "activityType", media: "image" },
+  },
 });
